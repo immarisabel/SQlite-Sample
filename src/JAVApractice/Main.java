@@ -41,7 +41,7 @@ public class Main {
 //            }
 
             /* ONLY MAX score DISPLAY */
-            String q = "SELECT name, score, MAX(score) FROM tableName group by score";
+            String q = "SELECT * FROM tableName WHERE score = (SELECT MAX(score) FROM tableName)\n";
             ResultSet rs = statement.executeQuery(q);
             // * = all
             if(rs.next())
