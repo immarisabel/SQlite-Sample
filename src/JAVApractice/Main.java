@@ -23,7 +23,7 @@ public class Main {
             // statement.executeUpdate("create table tableName (id integer PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE, name string, score integer)");
 
             /* ADD STATEMENT */
-            //  statement.executeUpdate("insert into tableName values(1, 'JOY', 20)");
+            //statement.executeUpdate("insert into tableName values(1, 'NEW', 40)");
 
             /* DELETE STATEMENT */
            // statement.executeUpdate("DELETE FROM tableName WHERE id = 1");
@@ -41,16 +41,14 @@ public class Main {
 //            }
 
             /* ONLY MAX score DISPLAY */
-            String q = "select name, score FROM tableName WHERE score = MAX(score)";
+            String q = "SELECT name, score, MAX(score) FROM tableName group by score";
             ResultSet rs = statement.executeQuery(q);
             // * = all
-            while(rs.next())
+            if(rs.next())
             {
                 // read the result set
-                System.out.println("MAX(score)="+rs.getInt("MAX(score)"));
-
-              //  System.out.println("MAX(score) = " + rs.getInt("score"));
-                System.out.println("name = " + rs.getString("name"));
+              System.out.println("score = " + rs.getInt("score"));
+                System.out.println("name = " + rs.getString("name") + "\n");
                      }
 
 
