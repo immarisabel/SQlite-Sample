@@ -1,7 +1,7 @@
 # SQlite Sample
  _base template to use SQlite_
 
-JDK 14
+JDK 14 + SQL jar file (sqlite-jdbc-3.7.2.jar) [add to library]
 
 Use with : [https://sqlitebrowser.org/]
 
