@@ -1,26 +1,27 @@
 # SQlite Sample
- *base template to use SQlite*
+ _base template to use SQlite_
 JDK 14
 
 ## QUERIES GUIDE
 
 ### main command
-*statement.executeUpdate*
+_statement.executeUpdate_
 
 ### create table
-*create table tableName (id integer PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE, name string, score integer)*
+_create table tableName (id integer PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE, name string, score integer)_
+
 ### insert data
-*insert into tableName values(1, 'name', 40)*
+_insert into tableName values(1, 'name', 40)_
 - 1 = id
 - name = name
 - 40 = score
 
 ### delete data
-*DELETE FROM tableName WHERE id = 1*
+_DELETE FROM tableName WHERE id = 1_
 
 ## display data
 ### full table
-*SELECT * FROM tableName*
+_SELECT * FROM tableName_
 ### max value
-*SELECT * FROM tableName WHERE score = (SELECT MAX(score) FROM tableName)*
+_SELECT * FROM tableName WHERE score = (SELECT MAX(score) FROM tableName)_
 
