@@ -1,6 +1,7 @@
 # SQlite Sample
  _base template to use SQlite_
 JDK 14
+Use with : [https://sqlitebrowser.org/][sqlite browser]
 
 ## QUERIES GUIDE
 
@@ -25,3 +26,5 @@ _SELECT * FROM tableName_
 ### max value
 _SELECT * FROM tableName WHERE score = (SELECT MAX(score) FROM tableName)_
 
+
+[sqlite browser]: https://sqlitebrowser.org/
